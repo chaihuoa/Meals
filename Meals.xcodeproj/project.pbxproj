@@ -16,6 +16,7 @@
 		E98F51E629720833009F3414 /* MealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51E529720833009F3414 /* MealsTests.swift */; };
 		E98F51F029720833009F3414 /* MealsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51EF29720833009F3414 /* MealsUITests.swift */; };
 		E98F51F229720833009F3414 /* MealsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51F129720833009F3414 /* MealsUITestsLaunchTests.swift */; };
+		E98F5201297209CF009F3414 /* HTTPNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F5200297209CF009F3414 /* HTTPNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E98F51EB29720833009F3414 /* MealsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98F51EF29720833009F3414 /* MealsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsUITests.swift; sourceTree = "<group>"; };
 		E98F51F129720833009F3414 /* MealsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E98F5200297209CF009F3414 /* HTTPNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		E98F51CD29720830009F3414 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				E98F51FE29720949009F3414 /* Foundation */,
 				E98F51CE29720830009F3414 /* AppDelegate.swift */,
 				E98F51D029720830009F3414 /* SceneDelegate.swift */,
 				E98F51D229720830009F3414 /* ViewController.swift */,
@@ -125,6 +128,22 @@
 				E98F51F129720833009F3414 /* MealsUITestsLaunchTests.swift */,
 			);
 			path = MealsUITests;
+			sourceTree = "<group>";
+		};
+		E98F51FE29720949009F3414 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				E98F51FF2972099F009F3414 /* HTTPNetwork */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		E98F51FF2972099F009F3414 /* HTTPNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				E98F5200297209CF009F3414 /* HTTPNetwork.swift */,
+			);
+			path = HTTPNetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			files = (
 				E98F51D329720830009F3414 /* ViewController.swift in Sources */,
 				E98F51CF29720830009F3414 /* AppDelegate.swift in Sources */,
+				E98F5201297209CF009F3414 /* HTTPNetwork.swift in Sources */,
 				E98F51D129720830009F3414 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
