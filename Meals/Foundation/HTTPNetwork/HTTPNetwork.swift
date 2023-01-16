@@ -45,7 +45,6 @@ final class NetworkManager {
         let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
-                print(error.localizedDescription)
                 return
             }
             
@@ -53,11 +52,11 @@ final class NetworkManager {
                 return
             }
             
-            if let responseObject = try? JSONDecoder().decode(T.self, from: data) {
+            do {
+                let responseObject = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(responseObject))
-            } else {
-                let error = NSError(domain: "com.meals", code: 200, userInfo: [NSLocalizedDescriptionKey: "Failed"])
-                completion(.failure(error))
+            } catch let jsonError as NSError {
+                completion(.failure(jsonError))
             }
         }
         
