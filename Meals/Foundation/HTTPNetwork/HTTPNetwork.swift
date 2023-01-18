@@ -34,7 +34,8 @@ final class NetworkManager {
     class func request<T: Decodable>(endpoint: API, completion: @escaping (Result<T, Error>) -> Void) {
         let components = buildURL(endpoint: endpoint)
         guard let url = components.url else {
-            print("URL creation error")
+            let error = HTTPError.invalidURL(url: String(describing: components.url))
+            completion(.failure(error))
             return
         }
         
@@ -49,6 +50,8 @@ final class NetworkManager {
             }
             
             guard response != nil, let data = data else {
+                let error = HTTPError.responseIsNull
+                completion(.failure(error))
                 return
             }
             
