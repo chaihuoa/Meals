@@ -20,7 +20,7 @@ final class MealsCollectionCell: UICollectionViewCell {
         static let profileDescriptionVerticalPadding: CGFloat = 8.0
     }
 
-    private let profileImageView: UIImageView = {
+    private let mealImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,22 +46,22 @@ final class MealsCollectionCell: UICollectionViewCell {
         contentView.layer.cornerRadius = Constants.contentViewCornerRadius
         contentView.backgroundColor = .white
 
-        contentView.addSubview(profileImageView)
+        contentView.addSubview(mealImageView)
         contentView.addSubview(name)
     }
 
     private func setupLayouts() {
         NSLayoutConstraint.activate([
-            profileImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            profileImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            profileImageView.heightAnchor.constraint(equalToConstant: Constants.imageHeight)
+            mealImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            mealImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            mealImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            mealImageView.heightAnchor.constraint(equalToConstant: Constants.imageHeight)
         ])
 
         NSLayoutConstraint.activate([
             name.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.horizontalPadding),
             name.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.horizontalPadding),
-            name.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: Constants.profileDescriptionVerticalPadding)
+            name.topAnchor.constraint(equalTo: mealImageView.bottomAnchor, constant: Constants.profileDescriptionVerticalPadding)
         ])
     }
 
@@ -70,7 +70,7 @@ final class MealsCollectionCell: UICollectionViewCell {
     }
 
     func setup(with meal: Meal) {
-        profileImageView.load(meal.thumb)
+        mealImageView.load(meal.thumb)
         name.text = meal.name
     }
 }

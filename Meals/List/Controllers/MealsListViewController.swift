@@ -38,6 +38,9 @@ class MealsListViewController: UIViewController {
     }
     
     private func setupViews() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Dessert"
+        
         view.backgroundColor = .white
         view.addSubview(collectionView)
 
@@ -80,9 +83,19 @@ extension MealsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MealsCollectionCell.identifier, for: indexPath) as! MealsCollectionCell
 
-        let profile = meals[indexPath.row]
-        cell.setup(with: profile)
+        let meal = meals[indexPath.row]
+        cell.setup(with: meal)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let meal = meals[indexPath.row]
+        navigateToRecipeViewController(meal.mealId)
+    }
+    
+    private func navigateToRecipeViewController(_ mealId: String) {
+        let recipeViewController = RecipeViewController(mealId: mealId)
+        navigationController?.pushViewController(recipeViewController, animated: true)
     }
 }
 

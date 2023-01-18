@@ -10,7 +10,6 @@
 		E98F51CF29720830009F3414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51CE29720830009F3414 /* AppDelegate.swift */; };
 		E98F51D129720830009F3414 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51D029720830009F3414 /* SceneDelegate.swift */; };
 		E98F51D329720830009F3414 /* MealsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51D229720830009F3414 /* MealsListViewController.swift */; };
-		E98F51D629720830009F3414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F51D429720830009F3414 /* Main.storyboard */; };
 		E98F51D829720832009F3414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98F51D729720832009F3414 /* Assets.xcassets */; };
 		E98F51DB29720832009F3414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F51D929720832009F3414 /* LaunchScreen.storyboard */; };
 		E98F51E629720833009F3414 /* MealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F51E529720833009F3414 /* MealsTests.swift */; };
@@ -22,6 +21,19 @@
 		E98F520A29724B06009F3414 /* MealsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F520929724B06009F3414 /* MealsCollectionCell.swift */; };
 		E98F521129724BB8009F3414 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F521029724BB8009F3414 /* Endpoint.swift */; };
 		E98F52142975037F009F3414 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F52132975037F009F3414 /* UIImageView+Extension.swift */; };
+		E98F521B29750D17009F3414 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F521A29750D17009F3414 /* RecipeViewController.swift */; };
+		E98F521D29750D27009F3414 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F521C29750D27009F3414 /* RecipeViewModel.swift */; };
+		E98F521F29750D38009F3414 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F521E29750D38009F3414 /* Recipe.swift */; };
+		E98F522129751918009F3414 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522029751918009F3414 /* HTTPError.swift */; };
+		E98F5223297671BD009F3414 /* RecipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F5222297671BD009F3414 /* RecipeHeaderView.swift */; };
+		E98F522629771B9B009F3414 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522529771B9B009F3414 /* LayoutProxy.swift */; };
+		E98F522829771D17009F3414 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522729771D17009F3414 /* UIView+Constraints.swift */; };
+		E98F522A2977A5A0009F3414 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F52292977A5A0009F3414 /* IngredientView.swift */; };
+		E98F522C2977A5C2009F3414 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522B2977A5C2009F3414 /* InstructionView.swift */; };
+		E98F522E2977BBE5009F3414 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522D2977BBE5009F3414 /* UIStackView+Extension.swift */; };
+		E98F523029785A7D009F3414 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522F29785A7D009F3414 /* VideoView.swift */; };
+		E98F5232297866EB009F3414 /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F5231297866EB009F3414 /* LayoutDimension.swift */; };
+		E98F52342978672D009F3414 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F52332978672D009F3414 /* LayoutAnchor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +58,6 @@
 		E98F51CE29720830009F3414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E98F51D029720830009F3414 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E98F51D229720830009F3414 /* MealsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewController.swift; sourceTree = "<group>"; };
-		E98F51D529720830009F3414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E98F51D729720832009F3414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E98F51DA29720832009F3414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E98F51DC29720832009F3414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +72,19 @@
 		E98F520929724B06009F3414 /* MealsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCollectionCell.swift; sourceTree = "<group>"; };
 		E98F521029724BB8009F3414 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E98F52132975037F009F3414 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		E98F521A29750D17009F3414 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		E98F521C29750D27009F3414 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		E98F521E29750D38009F3414 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		E98F522029751918009F3414 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		E98F5222297671BD009F3414 /* RecipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeaderView.swift; sourceTree = "<group>"; };
+		E98F522529771B9B009F3414 /* LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
+		E98F522729771D17009F3414 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		E98F52292977A5A0009F3414 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
+		E98F522B2977A5C2009F3414 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		E98F522D2977BBE5009F3414 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		E98F522F29785A7D009F3414 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		E98F5231297866EB009F3414 /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
+		E98F52332978672D009F3414 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +135,12 @@
 		E98F51CD29720830009F3414 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				E98F5215297509B2009F3414 /* Detail */,
 				E98F520229724A36009F3414 /* List */,
+				E98F5235297867A4009F3414 /* UIKit */,
 				E98F51FE29720949009F3414 /* Foundation */,
 				E98F51CE29720830009F3414 /* AppDelegate.swift */,
 				E98F51D029720830009F3414 /* SceneDelegate.swift */,
-				E98F51D429720830009F3414 /* Main.storyboard */,
 				E98F51D729720832009F3414 /* Assets.xcassets */,
 				E98F51D929720832009F3414 /* LaunchScreen.storyboard */,
 				E98F51DC29720832009F3414 /* Info.plist */,
@@ -154,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				E98F5200297209CF009F3414 /* HTTPNetwork.swift */,
+				E98F522029751918009F3414 /* HTTPError.swift */,
 			);
 			path = HTTPNetwork;
 			sourceTree = "<group>";
@@ -213,6 +239,80 @@
 			isa = PBXGroup;
 			children = (
 				E98F52132975037F009F3414 /* UIImageView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E98F5215297509B2009F3414 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E98F521929750D02009F3414 /* Models */,
+				E98F521829750CF5009F3414 /* ViewModels */,
+				E98F521729750CEF009F3414 /* Views */,
+				E98F521629750CE4009F3414 /* Controllers */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E98F521629750CE4009F3414 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E98F521A29750D17009F3414 /* RecipeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E98F521729750CEF009F3414 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E98F5222297671BD009F3414 /* RecipeHeaderView.swift */,
+				E98F52292977A5A0009F3414 /* IngredientView.swift */,
+				E98F522B2977A5C2009F3414 /* InstructionView.swift */,
+				E98F522F29785A7D009F3414 /* VideoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E98F521829750CF5009F3414 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E98F521C29750D27009F3414 /* RecipeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E98F521929750D02009F3414 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E98F521E29750D38009F3414 /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E98F522429771ACE009F3414 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				E98F522529771B9B009F3414 /* LayoutProxy.swift */,
+				E98F522729771D17009F3414 /* UIView+Constraints.swift */,
+				E98F5231297866EB009F3414 /* LayoutDimension.swift */,
+				E98F52332978672D009F3414 /* LayoutAnchor.swift */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		E98F5235297867A4009F3414 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E98F5236297867BC009F3414 /* Extension */,
+				E98F522429771ACE009F3414 /* AutoLayout */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E98F5236297867BC009F3414 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E98F522D2977BBE5009F3414 /* UIStackView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -323,7 +423,6 @@
 			files = (
 				E98F51DB29720832009F3414 /* LaunchScreen.storyboard in Resources */,
 				E98F51D829720832009F3414 /* Assets.xcassets in Resources */,
-				E98F51D629720830009F3414 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,11 +451,24 @@
 				E98F521129724BB8009F3414 /* Endpoint.swift in Sources */,
 				E98F520829724ADF009F3414 /* MealsListViewModel.swift in Sources */,
 				E98F52142975037F009F3414 /* UIImageView+Extension.swift in Sources */,
+				E98F52342978672D009F3414 /* LayoutAnchor.swift in Sources */,
 				E98F51D329720830009F3414 /* MealsListViewController.swift in Sources */,
+				E98F522C2977A5C2009F3414 /* InstructionView.swift in Sources */,
+				E98F522E2977BBE5009F3414 /* UIStackView+Extension.swift in Sources */,
+				E98F522A2977A5A0009F3414 /* IngredientView.swift in Sources */,
+				E98F521D29750D27009F3414 /* RecipeViewModel.swift in Sources */,
+				E98F522129751918009F3414 /* HTTPError.swift in Sources */,
+				E98F5232297866EB009F3414 /* LayoutDimension.swift in Sources */,
 				E98F51CF29720830009F3414 /* AppDelegate.swift in Sources */,
+				E98F522629771B9B009F3414 /* LayoutProxy.swift in Sources */,
+				E98F5223297671BD009F3414 /* RecipeHeaderView.swift in Sources */,
 				E98F5201297209CF009F3414 /* HTTPNetwork.swift in Sources */,
 				E98F520629724AC5009F3414 /* Meals.swift in Sources */,
+				E98F521F29750D38009F3414 /* Recipe.swift in Sources */,
+				E98F523029785A7D009F3414 /* VideoView.swift in Sources */,
+				E98F521B29750D17009F3414 /* RecipeViewController.swift in Sources */,
 				E98F51D129720830009F3414 /* SceneDelegate.swift in Sources */,
+				E98F522829771D17009F3414 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,14 +505,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E98F51D429720830009F3414 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E98F51D529720830009F3414 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E98F51D929720832009F3414 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -537,9 +641,9 @@
 				INFOPLIST_FILE = Meals/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,9 +668,9 @@
 				INFOPLIST_FILE = Meals/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
