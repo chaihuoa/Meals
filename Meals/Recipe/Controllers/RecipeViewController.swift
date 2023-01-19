@@ -11,7 +11,7 @@ import UIKit
 class RecipeViewController: UIViewController {
     private var recipe: Recipe?
     private var mealId: String
-    private let viewModel = RecipeViewModel()
+    private let viewModel: RecipeViewModel
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -28,8 +28,11 @@ class RecipeViewController: UIViewController {
         return stackView
     }()
     
-    init(mealId: String) {
+    // MARK: - Life cycle
+    
+    init(mealId: String, viewModel: RecipeViewModel) {
         self.mealId = mealId
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -76,6 +79,8 @@ class RecipeViewController: UIViewController {
     }
 }
 
+// MARK: - ViewModel Delegate
+
 extension RecipeViewController: RecipeViewModelDelegate {
     func recipeDataSource(_ dataSource: RecipeViewModel, recipe: Recipe?, error: Error?) {
         if let recipe = recipe {
@@ -89,6 +94,8 @@ extension RecipeViewController: RecipeViewModelDelegate {
         }
     }
 }
+
+// MARK: - VideoView Delegate
 
 extension RecipeViewController: VideoViewDelegate {
     func openVideoFromUrl() {

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class MealsListViewController: UIViewController {
-    private let viewModel = MealsListViewModel()
+    private let viewModel: MealsListViewModel
     private var meals: [Meal] = []
     private var category: String
     
@@ -17,7 +17,6 @@ class MealsListViewController: UIViewController {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
         collectionView.backgroundColor = .white
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
 
@@ -28,8 +27,9 @@ class MealsListViewController: UIViewController {
     
     // MARK: - Life cycle
     
-    init(_ category: String) {
+    init(_ category: String, viewModel: MealsListViewModel) {
         self.category = category
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -49,7 +49,7 @@ class MealsListViewController: UIViewController {
     
     private func setupViews() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Dessert"
+        navigationItem.title = category
         
         view.backgroundColor = .white
         view.addSubview(collectionView)
@@ -60,12 +60,12 @@ class MealsListViewController: UIViewController {
     }
 
     private func setupLayouts() {
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
-        ])
+        collectionView.layout {
+            $0.top == view.safeAreaLayoutGuide.topAnchor
+            $0.bottom == view.safeAreaLayoutGuide.bottomAnchor
+            $0.leading == view.leadingAnchor
+            $0.trailing == view.trailingAnchor
+        }
     }
 }
 
@@ -104,7 +104,8 @@ extension MealsListViewController: UICollectionViewDataSource {
     }
     
     private func navigateToRecipeViewController(_ mealId: String) {
-        let recipeViewController = RecipeViewController(mealId: mealId)
+        let viewModel = RecipeViewModel()
+        let recipeViewController = RecipeViewController(mealId: mealId, viewModel: viewModel)
         present(recipeViewController, animated: true)
     }
 }

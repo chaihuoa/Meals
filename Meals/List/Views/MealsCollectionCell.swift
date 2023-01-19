@@ -17,21 +17,18 @@ final class MealsCollectionCell: UICollectionViewCell {
         static let imageHeight: CGFloat = 180.0
         static let verticalSpacing: CGFloat = 8.0
         static let horizontalPadding: CGFloat = 16.0
-        static let profileDescriptionVerticalPadding: CGFloat = 8.0
     }
 
     private let mealImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
-    let name: UILabel = {
+    let nameLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textAlignment = .center
         label.numberOfLines = 3
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -47,22 +44,22 @@ final class MealsCollectionCell: UICollectionViewCell {
         contentView.backgroundColor = .white
 
         contentView.addSubview(mealImageView)
-        contentView.addSubview(name)
+        contentView.addSubview(nameLabel)
     }
 
-    private func setupLayouts() {
-        NSLayoutConstraint.activate([
-            mealImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            mealImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            mealImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            mealImageView.heightAnchor.constraint(equalToConstant: Constants.imageHeight)
-        ])
-
-        NSLayoutConstraint.activate([
-            name.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.horizontalPadding),
-            name.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.horizontalPadding),
-            name.topAnchor.constraint(equalTo: mealImageView.bottomAnchor, constant: Constants.profileDescriptionVerticalPadding)
-        ])
+    private func setupLayouts() {        
+        mealImageView.layout {
+            $0.leading == contentView.leadingAnchor
+            $0.trailing == contentView.trailingAnchor
+            $0.top == contentView.topAnchor
+            $0.height == Constants.imageHeight
+        }
+        
+        nameLabel.layout {
+            $0.leading == contentView.leadingAnchor + Constants.horizontalPadding
+            $0.trailing == contentView.trailingAnchor - Constants.horizontalPadding
+            $0.top == mealImageView.bottomAnchor + Constants.verticalSpacing
+        }
     }
 
     required init?(coder: NSCoder) {
@@ -71,7 +68,7 @@ final class MealsCollectionCell: UICollectionViewCell {
 
     func setup(with meal: Meal) {
         mealImageView.load(meal.thumb)
-        name.text = meal.name
+        nameLabel.text = meal.name
     }
 }
 
