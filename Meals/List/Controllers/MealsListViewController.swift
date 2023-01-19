@@ -11,6 +11,7 @@ import UIKit
 class MealsListViewController: UIViewController {
     private let viewModel = MealsListViewModel()
     private var meals: [Meal] = []
+    private var category: String
     
     private let collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
@@ -27,9 +28,18 @@ class MealsListViewController: UIViewController {
     
     // MARK: - Life cycle
     
+    init(_ category: String) {
+        self.category = category
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.requestMealsListData()
+        viewModel.requestMealsListData(with: category)
         viewModel.delegate = self
         
         setupViews()
@@ -64,7 +74,7 @@ class MealsListViewController: UIViewController {
 extension MealsListViewController: MealsListViewModelDelegate {
     func mealsListDataSource(_ dataSource: MealsListViewModel, meals: Meals?, error: Error?) {
         if let meals = meals {
-            self.meals = meals.meals
+            self.meals = meals.meals.sorted { $0.name.lowercased() < $1.name.lowercased() }
             self.collectionView.reloadData()
         }
         if let error = error {
@@ -95,7 +105,7 @@ extension MealsListViewController: UICollectionViewDataSource {
     
     private func navigateToRecipeViewController(_ mealId: String) {
         let recipeViewController = RecipeViewController(mealId: mealId)
-        navigationController?.pushViewController(recipeViewController, animated: true)
+        present(recipeViewController, animated: true)
     }
 }
 

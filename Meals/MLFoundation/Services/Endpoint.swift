@@ -8,8 +8,8 @@
 import Foundation
 
 enum Endpoint: API {
-    case getListMeals(category: String)
-    case getMealDetail(mealId: String)
+    case getMealsList(category: String)
+    case getRecipe(mealId: String)
     
     var baseURL: String {
         return "themealdb.com"
@@ -17,27 +17,27 @@ enum Endpoint: API {
     
     var path: String {
         switch self {
-        case .getListMeals:
+        case .getMealsList:
             return "/api/json/v1/1/filter.php"
-        case .getMealDetail:
+        case .getRecipe:
             return "/api/json/v1/1/lookup.php"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getListMeals:
+        case .getMealsList:
             return .GET
-        case .getMealDetail:
+        case .getRecipe:
             return .GET
         }
     }
     
     var params: [URLQueryItem]? {
         switch self {
-        case .getListMeals(let category):
+        case .getMealsList(let category):
             return [URLQueryItem(name: "c", value: category)]
-        case .getMealDetail(let mealId):
+        case .getRecipe(let mealId):
             return [URLQueryItem(name: "i", value: mealId)]
         }
     }

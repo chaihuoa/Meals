@@ -14,8 +14,8 @@ protocol MealsListViewModelDelegate: AnyObject {
 class MealsListViewModel {
     weak var delegate: MealsListViewModelDelegate?
     
-    func requestMealsListData() {
-        let endpoint = Endpoint.getListMeals(category: "Dessert")
+    func requestMealsListData(with category: String) {
+        let endpoint = Endpoint.getMealsList(category: category)
         NetworkManager.request(endpoint: endpoint) { [weak self] (result: Result<Meals, Error>) in
             guard let self = self else { return }
             DispatchQueue.main.async {
