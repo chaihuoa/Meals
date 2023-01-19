@@ -34,6 +34,9 @@
 		E98F523029785A7D009F3414 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F522F29785A7D009F3414 /* VideoView.swift */; };
 		E98F5232297866EB009F3414 /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F5231297866EB009F3414 /* LayoutDimension.swift */; };
 		E98F52342978672D009F3414 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F52332978672D009F3414 /* LayoutAnchor.swift */; };
+		E98F523A29789889009F3414 /* RecipeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F523929789889009F3414 /* RecipeViewModelTests.swift */; };
+		E98F523C297898A0009F3414 /* MealsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F523B297898A0009F3414 /* MealsListViewModelTests.swift */; };
+		E98F523E297902CF009F3414 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F523D297902CF009F3414 /* EndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		E98F522F29785A7D009F3414 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		E98F5231297866EB009F3414 /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
 		E98F52332978672D009F3414 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
+		E98F523929789889009F3414 /* RecipeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModelTests.swift; sourceTree = "<group>"; };
+		E98F523B297898A0009F3414 /* MealsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewModelTests.swift; sourceTree = "<group>"; };
+		E98F523D297902CF009F3414 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +141,10 @@
 		E98F51CD29720830009F3414 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
-				E98F5215297509B2009F3414 /* Detail */,
+				E98F5215297509B2009F3414 /* Recipe */,
 				E98F520229724A36009F3414 /* List */,
-				E98F5235297867A4009F3414 /* UIKit */,
-				E98F51FE29720949009F3414 /* Foundation */,
+				E98F5235297867A4009F3414 /* MLUIKit */,
+				E98F51FE29720949009F3414 /* MLFoundation */,
 				E98F51CE29720830009F3414 /* AppDelegate.swift */,
 				E98F51D029720830009F3414 /* SceneDelegate.swift */,
 				E98F51D729720832009F3414 /* Assets.xcassets */,
@@ -152,6 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				E98F51E529720833009F3414 /* MealsTests.swift */,
+				E98F523929789889009F3414 /* RecipeViewModelTests.swift */,
+				E98F523B297898A0009F3414 /* MealsListViewModelTests.swift */,
+				E98F523D297902CF009F3414 /* EndpointTests.swift */,
 			);
 			path = MealsTests;
 			sourceTree = "<group>";
@@ -165,14 +174,14 @@
 			path = MealsUITests;
 			sourceTree = "<group>";
 		};
-		E98F51FE29720949009F3414 /* Foundation */ = {
+		E98F51FE29720949009F3414 /* MLFoundation */ = {
 			isa = PBXGroup;
 			children = (
 				E98F52122975036C009F3414 /* Extension */,
 				E98F520F29724B83009F3414 /* Services */,
 				E98F51FF2972099F009F3414 /* HTTPNetwork */,
 			);
-			path = Foundation;
+			path = MLFoundation;
 			sourceTree = "<group>";
 		};
 		E98F51FF2972099F009F3414 /* HTTPNetwork */ = {
@@ -243,7 +252,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		E98F5215297509B2009F3414 /* Detail */ = {
+		E98F5215297509B2009F3414 /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
 				E98F521929750D02009F3414 /* Models */,
@@ -251,7 +260,7 @@
 				E98F521729750CEF009F3414 /* Views */,
 				E98F521629750CE4009F3414 /* Controllers */,
 			);
-			path = Detail;
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 		E98F521629750CE4009F3414 /* Controllers */ = {
@@ -300,13 +309,13 @@
 			path = AutoLayout;
 			sourceTree = "<group>";
 		};
-		E98F5235297867A4009F3414 /* UIKit */ = {
+		E98F5235297867A4009F3414 /* MLUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				E98F5236297867BC009F3414 /* Extension */,
 				E98F522429771ACE009F3414 /* AutoLayout */,
 			);
-			path = UIKit;
+			path = MLUIKit;
 			sourceTree = "<group>";
 		};
 		E98F5236297867BC009F3414 /* Extension */ = {
@@ -476,6 +485,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98F523C297898A0009F3414 /* MealsListViewModelTests.swift in Sources */,
+				E98F523A29789889009F3414 /* RecipeViewModelTests.swift in Sources */,
+				E98F523E297902CF009F3414 /* EndpointTests.swift in Sources */,
 				E98F51E629720833009F3414 /* MealsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
