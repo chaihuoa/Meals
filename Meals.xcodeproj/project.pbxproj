@@ -118,10 +118,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90FC58B2979E0100006F7B7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E98F51CE29720830009F3414 /* AppDelegate.swift */,
+				E98F51D029720830009F3414 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E90FC58C2979E01C0006F7B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E98F51D729720832009F3414 /* Assets.xcassets */,
+				E98F51D929720832009F3414 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E98F51C229720830009F3414 = {
 			isa = PBXGroup;
 			children = (
 				E98F51CD29720830009F3414 /* Meals */,
+				E98F51DC29720832009F3414 /* Info.plist */,
 				E98F51E429720833009F3414 /* MealsTests */,
 				E98F51EE29720833009F3414 /* MealsUITests */,
 				E98F51CC29720830009F3414 /* Products */,
@@ -141,15 +160,12 @@
 		E98F51CD29720830009F3414 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				E90FC58B2979E0100006F7B7 /* App */,
 				E98F5215297509B2009F3414 /* Recipe */,
 				E98F520229724A36009F3414 /* List */,
 				E98F5235297867A4009F3414 /* MLUIKit */,
 				E98F51FE29720949009F3414 /* MLFoundation */,
-				E98F51CE29720830009F3414 /* AppDelegate.swift */,
-				E98F51D029720830009F3414 /* SceneDelegate.swift */,
-				E98F51D729720832009F3414 /* Assets.xcassets */,
-				E98F51D929720832009F3414 /* LaunchScreen.storyboard */,
-				E98F51DC29720832009F3414 /* Info.plist */,
+				E90FC58C2979E01C0006F7B7 /* Resources */,
 			);
 			path = Meals;
 			sourceTree = "<group>";
