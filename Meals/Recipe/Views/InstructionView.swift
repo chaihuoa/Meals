@@ -28,7 +28,7 @@ class InstructionView: UIView {
     }()
     
     private enum Constants {
-        static let titleLabelHeight: CGFloat = 30.0
+        static let titleLabelHeight: CGFloat = 35.0
         static let verticalSpacing: CGFloat = 10.0
         static let horizontalPadding: CGFloat = 16.0
     }

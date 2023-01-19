@@ -100,6 +100,11 @@ extension RecipeViewController: RecipeViewModelDelegate {
 extension RecipeViewController: VideoViewDelegate {
     func openVideoFromUrl() {
         guard let recipe = recipe, let url = URL(string: recipe.video) else { return }
-        UIApplication.shared.open(url)
+        let application = UIApplication.shared
+        if application.canOpenURL(url) {
+            application.open(url)
+        } else {
+            // prompt the user video is unavailable
+        }
     }
 }
